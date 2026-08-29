@@ -1,0 +1,165 @@
+# From Theory to Practice: Implementing Classic Data Structures in Python
+
+## Introduction
+
+Data Structures and Algorithms are two of the most important concepts in computer science. They help us understand how data can be organized, stored, processed, and accessed efficiently. While learning these concepts theoretically is important, implementing them in a programming language makes them much easier to understand.
+
+As part of my learning through the **Infosys Springboard – Data Structures & Algorithms using C++, C and Python** course, I explored how common data structures can be implemented using Python. Python provides simple syntax and built-in features that allow beginners to focus more on understanding the logic rather than dealing with complicated syntax.
+
+This article discusses some classic data structures and how Python can be used to implement them.
+
+## Understanding Data Structures
+
+A data structure is a method of organizing data so that it can be used efficiently. Different problems require different ways of organizing information.
+
+For example, if we need to store items in a particular order, an array or list can be useful. If we need a system where the most recently added item is processed first, a stack is more suitable. Similarly, when the first item added needs to be processed first, a queue is useful.
+
+Understanding these differences is an important part of developing algorithmic thinking.
+
+## Arrays and Lists
+
+Arrays are one of the simplest ways to store multiple elements. Python provides a built-in **list** that can be used for many operations normally associated with arrays.
+
+For example:
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[2])
+```
+
+The output is:
+
+```text
+30
+```
+
+Python lists allow elements to be accessed using indexes. They can also be modified by adding, removing, or updating elements.
+
+This makes lists useful for applications such as storing student marks, maintaining product information, or keeping track of items in a system.
+
+## Stack
+
+A stack follows the **LIFO (Last In, First Out)** principle. This means the element added last is removed first.
+
+A simple real-life example is a stack of plates. The last plate placed on top is the first plate that can be removed.
+
+Python lists can be used to implement a stack:
+
+```python
+stack = []
+
+stack.append(10)
+stack.append(20)
+stack.append(30)
+
+print(stack.pop())
+```
+
+The output is:
+
+```text
+30
+```
+
+Stacks are commonly used in function calls, expression evaluation, undo operations, and depth-first search.
+
+Learning stacks helped me understand how the order in which data is processed can affect an algorithm.
+
+## Queue
+
+A queue follows the **FIFO (First In, First Out)** principle. The first element added to the queue is the first one removed.
+
+A simple example is a queue of people waiting at a counter. The person who arrives first is normally served first.
+
+In Python, a queue can be implemented efficiently using the `deque` class:
+
+```python
+from collections import deque
+
+queue = deque()
+
+queue.append(10)
+queue.append(20)
+queue.append(30)
+
+print(queue.popleft())
+```
+
+The output is:
+
+```text
+10
+```
+
+Queues are useful in scheduling systems, printer management, customer service systems, and graph algorithms such as Breadth First Search.
+
+## Linked Lists
+
+A linked list stores data in separate nodes. Each node contains the data and a reference to the next node.
+
+Unlike an array, linked-list elements do not need to be stored next to each other in memory.
+
+A simple node can be created in Python using a class:
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+```
+
+A linked list can then be constructed by connecting multiple nodes.
+
+Linked lists are useful when frequent insertion and deletion operations are required. They are also an important foundation for understanding more advanced data structures.
+
+## Searching and Sorting
+
+Data structures become more useful when combined with algorithms. Two fundamental algorithmic operations are searching and sorting.
+
+Searching involves finding a particular element from a collection of data. For a sorted list, **binary search** can find an element much faster than checking every element one by one.
+
+Sorting involves arranging data in a particular order. Algorithms such as bubble sort, selection sort, and insertion sort are commonly introduced when learning the basics of algorithms.
+
+For example, Python provides a simple way to sort a list:
+
+```python
+numbers = [40, 10, 30, 20]
+numbers.sort()
+
+print(numbers)
+```
+
+The output is:
+
+```text
+[10, 20, 30, 40]
+```
+
+Although Python provides built-in sorting functions, implementing sorting algorithms manually is valuable because it helps us understand how these algorithms actually work.
+
+## Why Python is Useful for Learning DSA
+
+One of the biggest advantages of Python for beginners is its readability. The syntax is relatively simple, which allows learners to concentrate on the algorithm instead of spending too much time managing language-specific syntax.
+
+Python also provides useful built-in data structures such as lists, tuples, sets, and dictionaries. These structures make it possible to experiment with different approaches to solving problems.
+
+However, using built-in features alone is not enough to understand DSA. Implementing structures such as stacks, queues, linked lists, and searching or sorting algorithms manually provides a better understanding of their internal working and efficiency.
+
+## Real-World Applications
+
+Data structures and algorithms are not limited to classroom exercises. They are used in many real-world applications.
+
+Stacks are used in browser history and undo functionality. Queues are used in scheduling and service systems. Searching algorithms are used in databases and information retrieval. Sorting is used whenever large amounts of data need to be organized.
+
+Graph algorithms can also be used in areas such as network analysis, navigation systems, social networks, and cybersecurity.
+
+This shows that learning DSA is not only about solving programming questions but also about learning how to approach problems efficiently.
+
+## Conclusion
+
+Learning Data Structures and Algorithms through Python helped me connect theoretical concepts with practical programming. Implementing lists, stacks, queues, linked lists, searching, and sorting algorithms made the concepts more understandable and showed how different structures can be selected depending on the problem.
+
+The Infosys Springboard course provides a useful foundation for developing these skills. The most important lesson I gained is that writing code is only one part of programming. Understanding how data is organized and how efficiently a problem can be solved is equally important.
+
+As I continue learning DSA, these fundamentals will help me approach more complex topics and develop better problem-solving and programming skills.
